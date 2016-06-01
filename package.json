@@ -16,6 +16,7 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
-    "highcharts": "^4.2.5"
+    "highcharts": "^4.2.5",
+    "jasmine": "^2.4.1"
   }
 }
