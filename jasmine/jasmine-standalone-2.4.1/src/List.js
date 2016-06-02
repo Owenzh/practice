@@ -98,3 +98,6 @@ List.prototype.RemoveRange = function (index, count) {
         this.RemoveAt(i);
     }
 };
+
+
+module.exports = List;
