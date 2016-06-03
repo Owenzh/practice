@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src\List.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">src/</a> List.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60.66% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>37/61</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">61.11% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60.66% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>37/61</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">function List() {
+    this.itemArray = new Array();
+}
+List.prototype.Add = function (item) {
+    this.itemArray.push(item);
+};
+List.prototype.AddRange = <span class="fstat-no" title="function not covered" >function (collection) {</span>
+<span class="cstat-no" title="statement not covered" >    if (collection instanceof List) {</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; collection.Count; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            this.Add(collection.ElementAt(i));</span>
+        }
+    }
+    else <span class="cstat-no" title="statement not covered" >if (collection instanceof Array) {</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; collection.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            this.Add(collection[i]);</span>
+        }
+    }
+};
+List.prototype.GetFirst = function () {
+    return this.itemArray[0];
+};
+List.prototype.Clear = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    this.itemArray = new Array();</span>
+};
+List.prototype.GetItem = function (index) {
+    return this.itemArray[index];
+};
+List.prototype.Remove = function (item) {
+    for (var i = 0; i &lt; this.itemArray.length; i++) {
+        if (this.itemArray[i] === item) {
+            this.itemArray.splice(i, 1);
+            return true;
+        }
+        else {
+            continue;
+        }
+    }
+<span class="cstat-no" title="statement not covered" >    return false;</span>
+};
+List.prototype.RemoveAt = <span class="fstat-no" title="function not covered" >function (index) {</span>
+<span class="cstat-no" title="statement not covered" >    var vItem = this.itemArray[index];</span>
+<span class="cstat-no" title="statement not covered" >    if (vItem) {</span>
+<span class="cstat-no" title="statement not covered" >        this.itemArray.splice(index, 1);</span>
+    }
+};
+List.prototype.ElementAt = <span class="fstat-no" title="function not covered" >function (index) {</span>
+<span class="cstat-no" title="statement not covered" >    if (index &gt; 0 || index &lt;= this.itemArray.length)</span>
+<span class="cstat-no" title="statement not covered" >        return this.itemArray[index];</span>
+    else
+<span class="cstat-no" title="statement not covered" >        throw "ArgumentOutOfRangeException";</span>
+};
+Object.defineProperty(List.prototype, "Count", {
+    get: function () {
+        return this.itemArray.length;
+    },
+    enumerable: true,
+    configurable: true
+});
+List.prototype.Contains = function (item) {
+    return this.itemArray.indexOf(item) &gt;= 0;
+};
+List.prototype.IndexOf = function (item) {
+    return this.itemArray.indexOf(item);
+};
+List.prototype.Sort = function () {
+    var params = [];
+    for (var _i = 0; _i &lt; arguments.length; _i++) {
+<span class="cstat-no" title="statement not covered" >        params[_i - 0] = arguments[_i];</span>
+    }
+    this.itemArray.sort();
+};
+List.prototype.Insert = function (index, item) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (index &lt; 0) {
+<span class="cstat-no" title="statement not covered" >        throw "index cant be negative";</span>
+    }
+    else <span class="missing-if-branch" title="if path not taken" >I</span>if (index &gt; this.Count) {
+<span class="cstat-no" title="statement not covered" >        throw "index cant be greater than System.Collections.ObjectModel.Collection&lt;T&gt;.Count";</span>
+    }
+    else {
+        this.itemArray.splice(index, 0, item);
+    }
+};
+List.prototype.CopyTo = <span class="fstat-no" title="function not covered" >function (array) {</span>
+<span class="cstat-no" title="statement not covered" >    return this.itemArray.slice();</span>
+};
+List.prototype.ToArray = function () {
+    return this.itemArray;
+};
+List.prototype.GetRange = <span class="fstat-no" title="function not covered" >function (index, count) {</span>
+<span class="cstat-no" title="statement not covered" >    var result = new List();</span>
+<span class="cstat-no" title="statement not covered" >    for (var i = index; i &lt; index + count; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        result.Add(this.itemArray[i]);</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return result;</span>
+};
+List.prototype.RemoveRange = <span class="fstat-no" title="function not covered" >function (index, count) {</span>
+<span class="cstat-no" title="statement not covered" >    for (var i = index; i &lt; index + count; i++) {</span>
+<span class="cstat-no" title="statement not covered" >        this.RemoveAt(i);</span>
+    }
+};
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 03 2016 21:34:31 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
