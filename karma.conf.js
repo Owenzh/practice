@@ -1,7 +1,6 @@
 // karma.conf.js
 module.exports = function(config) {
   config.set({
-    framework: ['jasmine'],
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
     // frameworks to use
