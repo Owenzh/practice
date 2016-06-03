@@ -99,5 +99,3 @@ List.prototype.RemoveRange = function (index, count) {
     }
 };
 
-
-module.exports = List;

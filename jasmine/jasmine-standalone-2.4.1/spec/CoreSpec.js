@@ -1,5 +1,5 @@
 describe('Core js test suite', function () {
-    describe('test suite', function () {
+    xdescribe('test suite', function () {
         var a;
         beforeEach(function () {
             a = 'ftvp';
@@ -15,43 +15,43 @@ describe('Core js test suite', function () {
             listObj = new System.Collections.Generic.List();
             listObj.Add('listItem01');//0
             listObj.Add('listItem02');//1
-            listObj.Add([23,'er']);//2
+            listObj.Add([23, 'er']);//2
         });
         it('List can be instance List', function () {
             expect(listObj instanceof System.Collections.Generic.List).toEqual(true);
         });
-        it("List Add fun",function(){
+        it("List Add fun", function () {
             expect('listItem01').toEqual(listObj.itemArray[0])
         });
-        it("List Count property",function(){
+        it("List Count property", function () {
             expect(listObj.Count).toEqual(3);
         });
-        it("List AddRange fun",function(){
-            listObj.AddRange(['aaa','bbb',false,12]);//3+4 = 7
+        it("List AddRange fun", function () {
+            listObj.AddRange(['aaa', 'bbb', false, 12]);//3+4 = 7
             expect(listObj.Count).toEqual(7);
         });
-        it("List GetFirst fun",function(){
+        it("List GetFirst fun", function () {
             expect(listObj.GetFirst()).toBe('listItem01');
             expect(listObj.GetFirst()).toEqual('listItem01');
         });
 
-        it("List GetItem fun",function(){
+        it("List GetItem fun", function () {
             listObj.Add('fff');
             expect(listObj.GetItem(3)).toEqual('fff');
         });
-        it("List Remove fun",function(){
+        it("List Remove fun", function () {
             listObj.Add('bbb');
             listObj.Add(23);
             expect(listObj.GetItem(3)).toEqual('bbb');
             listObj.Remove('bbb');
             expect(listObj.GetItem(3)).toEqual(23);
         });
-        it("List ToArray fun",function(){
+        it("List ToArray fun", function () {
             var isArr = listObj.ToArray();
             expect(isArr instanceof Array).toBe(true);
         });
 
-        it("List Clear fun",function(){
+        it("List Clear fun", function () {
             listObj.Clear();
             expect(listObj.Count).toEqual(0);
         });
