@@ -5,9 +5,9 @@ module.exports = function (config) {
         files: [
             //JASMINE,
             //JASMINE_ADAPTER,
-            {pattern: 'test/app.html', served: true, watched: false},
-            'test/src/*.js',
-            'test/spec/*.js'
+            //{pattern: 'test/app.html', served: false, watched: false},
+            'test/spec/*.js',
+            'test/src/*.js'
         ],
 
         // coverage reporter generates the coverage
@@ -29,13 +29,13 @@ module.exports = function (config) {
         // optionally, configure the reporter
         coverageReporter: {
             type: 'html',
-            dir: 'coverage/',
-            watermarks: {
-                statements: [10, 75],
-                functions: [50, 75],
-                branches: [50, 75],
-                lines: [50, 75]
-            }
+            dir: 'coverage/'
+            //watermarks: {
+            //    statements: [10, 75],
+            //    functions: [50, 75],
+            //    branches: [50, 75],
+            //    lines: [50, 75]
+            //}
         }
     });
 };

@@ -12,6 +12,7 @@ function init(){
     list.Sort();
     console.log(list.ToArray());
     console.log(list.GetFirst());
+    list.Clear();
 }
 
 document.onload = init();

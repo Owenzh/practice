@@ -1,4 +1,4 @@
-xdescribe("FTVP test suite",function(){
+describe("FTVP test suite",function(){
     var list;
     beforeEach(function() {
         list = new List();
@@ -8,6 +8,7 @@ xdescribe("FTVP test suite",function(){
     });
 
     it("List Add fun",function(){
+        list.Contains('listItem02');
         expect('listItem01').toEqual(list.itemArray[0])
     });
     it("List Count property",function(){
