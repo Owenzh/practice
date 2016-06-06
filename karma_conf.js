@@ -11,13 +11,17 @@ module.exports = function (config) {
         ],
 
         // coverage reporter generates the coverage
+        //reporters: ['progress'],
         reporters: ['progress', 'coverage'],
 
         preprocessors: {
             // source files, that you wanna generate coverage for
             // do not include tests or libraries
             // (these files will be instrumented by Istanbul)
+            //'test/src/*.js': 'coverage'
             'test/src/List.js': 'coverage'
+            //,'test/src/Core.js': 'coverage'
+
         },
         plugins: [
             'karma-coverage',
